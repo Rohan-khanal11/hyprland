@@ -7,7 +7,7 @@ set -e
 sudo pacman -Syu --needed --noconfirm \
   base-devel git \
   hyprland hyprpaper hyprlock waybar \
-  rofi fastfetch neovim nerd-fonts ghostty copyq grim slurp\
+  rofi fastfetch neovim nerd-fonts ghostty copyq grim slurp swaync\
   nvidia-dkms nvidia-utils lib32-nvidia-utils libva-nvidia-driver
 
 # ─────────────────────────────────────────────
@@ -48,7 +48,8 @@ yay -S --needed --noconfirm brave-origin-nightly
 CONFIG_DIR="$HOME/.config"
 mkdir -p "$CONFIG_DIR"
 
-cp -r hypr fastfetch rofi waybar nvim ghostty"$CONFIG_DIR/" 2>/dev/null || true
+cp -r hypr fastfetch rofi waybar nvim ghostty starship.toml swaync "$CONFIG_DIR/" 2>/dev/null || true
+cp -r .bashrc"$HOME_DIR/" 2>/dev/null || true
 
 echo "Full setup complete."
 echo "Please Reboot."
