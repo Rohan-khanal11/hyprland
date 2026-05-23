@@ -1,0 +1,241 @@
+/* =====================================================
+   Waybar Theme – Floating Glass (GTK Safe)
+   Transparent bar + pill modules + calendar
+   ===================================================== */
+
+* {
+  font-family: "Symbols Nerd Font", "JetBrainsMono Nerd Font",
+               "Font Awesome 6 Free", "Font Awesome 6 Brands", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 10px;
+}
+
+/* =====================================================
+   Main Bar
+   ===================================================== */
+
+window#waybar {
+  background: transparent;
+}
+
+#waybar > box {
+  background: transparent;
+  margin: 4px 8px 0 8px;
+}
+
+/* =====================================================
+   Tooltip
+   ===================================================== */
+
+tooltip {
+  background: rgba(12, 12, 12, 0.92);
+  color: #F0F0F0;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+tooltip label {
+  color: #F0F0F0;
+}
+
+/* =====================================================
+   Module Pills
+   ===================================================== */
+
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#battery,
+#network,
+#tray,
+#workspaces {
+  background: rgba(0, 0, 0, 0.48);
+  color: #EDEDED;
+  padding: 4px 10px;
+  margin: 2px 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Hover glow */
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover,
+#battery:hover,
+#custom-notification:hover, 
+#network:hover,
+#tray:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* =====================================================
+   Workspaces
+   ===================================================== */
+
+#workspaces button {
+  background: transparent;
+  color: #BEBEBE;
+  margin: 0 3px;
+  padding: 0 8px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: none;
+  transition: background 0.25s ease,
+              opacity 0.25s ease,
+              color 0.25s ease;
+}
+
+/* Empty – no apps open */
+#workspaces button.empty {
+  color: #BEBEBE;
+  opacity: 0.35;
+}
+
+/* Occupied – has apps */
+#workspaces button.occupied {
+  color: #FFFFFF;
+  opacity: 0.9;
+}
+
+/* Active / focused */
+#workspaces button.active,
+#workspaces button.focused {
+  background: rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+/* Urgent */
+#workspaces button.urgent {
+  background: rgba(180, 90, 90, 0.45);
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+/* Hover */
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+/* =====================================================
+   Clock – Calendar Popup
+   ===================================================== */
+
+calendar {
+  background: rgba(12, 12, 12, 0.92);
+  color: #EDEDED;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px;
+}
+
+/* Month / Year header row */
+calendar.header {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 13px;
+  padding-bottom: 4px;
+}
+
+/* Prev / Next arrows */
+calendar.button {
+  background: transparent;
+  color: #BEBEBE;
+  border: none;
+  border-radius: 6px;
+}
+
+calendar.button:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+}
+
+/* Weekday labels – Mon Tue Wed … */
+calendar:indeterminate {
+  color: #6A6A6A;
+}
+
+/* Days belonging to prev / next month */
+calendar.other-month {
+  color: #4A4A4A;
+  opacity: 0.5;
+}
+
+/* Today's date */
+calendar:selected {
+  background: rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* Hovered day */
+calendar day:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+}
+
+/* =====================================================
+   Pulseaudio
+   ===================================================== */
+
+#pulseaudio.muted {
+  color: #9A9A9A;
+}
+
+/* =====================================================
+   Battery
+   ===================================================== */
+
+#battery.charging {
+  color: #FFFFFF;
+}
+
+#battery.warning {
+  color: #C9A870;
+}
+
+#battery.critical {
+  color: #C97070;
+}
+
+/* =====================================================
+   Network
+   ===================================================== */
+
+#network.disconnected {
+  color: #7A7A7A;
+}
+
+/* =====================================================
+   Tray
+   ===================================================== */
+
+#tray > .item {
+  padding: 0 4px;
+}
+
+/* =====================================================
+   Focus fix
+   ===================================================== */
+
+label:focus {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
+  background: rgba(0, 0, 0, 0.48);
+  color: #EDEDED;
+  padding: 4px 10px;
+  margin: 2px 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.25s ease, color 0.25s ease;
+}

@@ -1,0 +1,145 @@
+/* -----------------------------------------------------
+Waybar Theme – Moonlit Wasteland
+Warm misty palette inspired by orange moonlight
+----------------------------------------------------- */
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 6px;
+  }
+
+/* --- Main Window --- */
+window#waybar {
+background-color: transparent;
+color: #C4A38C;
+}
+
+/* --- Bar Container --- */
+#waybar > box {
+margin: 4px 8px 0 8px;
+border: none;
+background-color: rgba(26, 24, 28, 0.6);
+border-radius: 6px;
+}
+
+/* --- Tooltip --- */
+tooltip {
+background: rgba(43, 42, 48, 0.95);
+color: #F9E4C8;
+border-radius: 7px;
+border: 1px solid #D87C6E;
+}
+
+/* --- Buttons --- */
+button {
+box-shadow: none;
+border: none;
+border-radius: 0;
+background: transparent;
+color: #C4A38C;
+}
+
+button:hover {
+background: rgba(216, 124, 110, 0.1);
+color: #F9B093;
+}
+
+/* -----------------------------------------------------
+Workspaces
+----------------------------------------------------- */
+#workspaces {
+padding: 2px 4px;
+color: #C4A38C;
+}
+
+#workspaces button {
+padding: 0 8px;
+margin: 0 2px;
+background: transparent;
+border: none;
+border-radius: 6px;
+transition: background 0.3s, color 0.3s;
+opacity: 0.7;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+background: rgba(216, 124, 110, 0.3);
+color: #F9E4C8;
+opacity: 1;
+}
+
+#workspaces button.empty {
+opacity: 0.4;
+color: #5A6D67;
+}
+
+#workspaces button.urgent {
+background: #D87C6E;
+color: #1A181C;
+opacity: 1;
+}
+
+#workspaces button:hover {
+background: rgba(216, 124, 110, 0.15);
+}
+
+/* -----------------------------------------------------
+Common modules
+----------------------------------------------------- */
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#battery,
+#bluetooth,
+#network,
+#tray {
+background: transparent;
+padding: 1px 10px;
+color: #C4A38C;
+transition: color 0.3s, background 0.3s;
+}
+
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover,
+#battery:hover,
+#bluetooth:hover {
+background: rgba(216, 124, 110, 0.1);
+}
+
+/* --- Pulseaudio --- */
+#pulseaudio.muted {
+color: #7B4C3A;
+}
+
+/* --- Battery --- */
+#battery.charging {
+color: #E1B482;
+}
+#battery.critical {
+color: #D87C6E;
+}
+
+/* --- Bluetooth --- */
+#bluetooth.connected {
+color: #F9B093;
+}
+#bluetooth.disconnected {
+color: #5A6D67;
+}
+
+/* --- Tray --- */
+#tray-expander {
+color: #C4A38C;
+}
+
+/* --- Focus label fix --- */
+label:focus {
+background: rgba(40, 35, 42, 0.8);
+}
+
